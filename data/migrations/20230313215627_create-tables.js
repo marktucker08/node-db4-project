@@ -22,8 +22,7 @@ exports.up = function(knex) {
             .unsigned()
             .notNullable()
             .references('recipe_id')
-            .inTable('recipes')
-            .onUpdate('CASCADE');
+            .inTable('recipes');
     })
     .createTable('ingredients', tbl => {
         tbl.increments('ingredient_id');
